@@ -38,4 +38,9 @@ public class EpisodioController {
 	public ResponseEntity<Episodio> getById(@PathVariable Integer id) {
 		return new ResponseEntity<Episodio>(service.getById(id), HttpStatus.OK);
 	}
+	
+	@GetMapping("{nome}")
+	public ResponseEntity<Episodio> getByNome(@PathVariable String nome) {
+		return new ResponseEntity<Episodio>(service.getByNome(nome), HttpStatus.OK);
+	}
 }

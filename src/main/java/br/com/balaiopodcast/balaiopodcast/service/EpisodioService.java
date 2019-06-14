@@ -33,4 +33,8 @@ public class EpisodioService {
 	public Episodio getById(Integer id) {
 		return episodioRepository.findById(id).orElseThrow(() -> NotFoundException.build("Episodio não encontrado!"));
 	}
+	
+	public Episodio getByNome(String nome) {
+		return episodioRepository.findByNome(nome);
+	}
 }
