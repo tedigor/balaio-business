@@ -1,7 +1,10 @@
 package br.com.balaiopodcast.balaiopodcast.dto;
 
-public class EpisodioDto {
+import java.util.Date;
 
+public abstract class EpisodioDto {
+	
+	
 	private String nome;
 
 	private String categoria;
@@ -10,14 +13,18 @@ public class EpisodioDto {
 
 	private String urlEpisodio;
 
-	public EpisodioDto(String nome, String categoria, String descricao, String urlEpisodio) {
+	private Date dataLancamento;
+	
+	
+	public EpisodioDto(String nome, String categoria, String descricao, String urlEpisodio, Date dataLancamento) {
 		super();
 		this.nome = nome;
 		this.categoria = categoria;
 		this.descricao = descricao;
 		this.urlEpisodio = urlEpisodio;
+		this.dataLancamento = dataLancamento;
 	}
-
+	
 	public EpisodioDto() {
 	}
 
@@ -52,7 +59,13 @@ public class EpisodioDto {
 	public void setUrlEpisodio(String urlEpisodio) {
 		this.urlEpisodio = urlEpisodio;
 	}
-	
-	
+
+	public Date getDataLancamento() {
+		return dataLancamento;
+	}
+
+	public void setDataLancamento(Date dataLancamento) {
+		this.dataLancamento = dataLancamento;
+	}
 
 }
