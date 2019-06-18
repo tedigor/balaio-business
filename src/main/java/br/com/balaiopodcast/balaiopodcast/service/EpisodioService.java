@@ -33,7 +33,7 @@ public class EpisodioService {
 	}
 
 	public Episodio getById(Integer id) {
-		
+
 		return episodioRepository.findById(id).orElseThrow(() -> NotFoundException.build("Episodio não encontrado!"));
 	}
 
@@ -41,11 +41,19 @@ public class EpisodioService {
 		return episodioRepository.findAll(EpisodiosSpecification.byFilter(nomeEpisodio, categoria)).stream()
 				.map(EpisodioMapper::mapper).collect(Collectors.toList());
 	}
-	
+
 	public void deleteById(Integer id) {
 		Episodio episodio = getById(id);
-		
+
 		episodio.setExclusaoLogica(true);
 		episodioRepository.save(episodio);
 	}
+
+	public void editEpisodio(Integer id, EpisodioDtoEntrada dto) {
+		Episodio episodio = EpisodioMapper.mapper(dto);
+		episodio.setId(id);
+
+		episodioRepository.save(episodio);
+	}
+
 }

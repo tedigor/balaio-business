@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
+import br.com.balaiopodcast.balaiopodcast.dto.EpisodioDtoEntrada;
 import br.com.balaiopodcast.balaiopodcast.model.Episodio;
 
 @Repository
