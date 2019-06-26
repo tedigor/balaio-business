@@ -10,7 +10,7 @@ public class EpisodioDtoSaida extends EpisodioDto {
 	}
 
 	public EpisodioDtoSaida(Integer id, String nome, String categoria, String descricao, String urlEpisodio,
-			Date dataLancamento) {
+			Long dataLancamento) {
 		super(nome, categoria, descricao, urlEpisodio, dataLancamento);
 		this.id = id;
 	}

@@ -1,5 +1,6 @@
 package br.com.balaiopodcast.balaiopodcast.service;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,8 +16,9 @@ import br.com.balaiopodcast.balaiopodcast.repository.EpisodioRepository;
 import br.com.balaiopodcast.balaiopodcast.specifications.EpisodiosSpecification;
 
 @Service
-public class EpisodioService {
+public class EpisodioService implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	private EpisodioRepository episodioRepository;
 
 	@Autowired

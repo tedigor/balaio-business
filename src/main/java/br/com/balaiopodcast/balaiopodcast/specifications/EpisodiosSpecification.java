@@ -1,5 +1,6 @@
 package br.com.balaiopodcast.balaiopodcast.specifications;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,9 @@ import org.springframework.data.jpa.domain.Specification;
 
 import br.com.balaiopodcast.balaiopodcast.model.Episodio;
 
-public class EpisodiosSpecification {
+public class EpisodiosSpecification implements Serializable  {
+
+	private static final long serialVersionUID = -5736244874471456812L;
 
 	public static Specification<Episodio> byFilter(String nomeEpisodio, String categoria) {
 		return new Specification<Episodio>() {

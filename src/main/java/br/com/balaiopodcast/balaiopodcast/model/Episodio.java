@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity(name = "episodios")
 @SequenceGenerator(name = "seq_episodio", sequenceName = "seq_episodio", initialValue = 1, allocationSize = 1)
@@ -37,6 +39,7 @@ public class Episodio implements Serializable {
 	private Boolean exclusaoLogica = false;
 
 	@Column(name = "data_lancamento", nullable = false)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dataLancamento;
 
 	

@@ -13,10 +13,10 @@ public abstract class EpisodioDto {
 
 	private String urlEpisodio;
 
-	private Date dataLancamento;
+	private Long dataLancamento;
 	
 	
-	public EpisodioDto(String nome, String categoria, String descricao, String urlEpisodio, Date dataLancamento) {
+	public EpisodioDto(String nome, String categoria, String descricao, String urlEpisodio, Long dataLancamento) {
 		super();
 		this.nome = nome;
 		this.categoria = categoria;
@@ -60,11 +60,11 @@ public abstract class EpisodioDto {
 		this.urlEpisodio = urlEpisodio;
 	}
 
-	public Date getDataLancamento() {
+	public Long getDataLancamento() {
 		return dataLancamento;
 	}
 
-	public void setDataLancamento(Date dataLancamento) {
+	public void setDataLancamento(Long dataLancamento) {
 		this.dataLancamento = dataLancamento;
 	}
 
